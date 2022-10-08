@@ -48,8 +48,10 @@ RUN apt-get install -y default-jre default-jdk
 # install rubygems
 ENV GEM_HOME /usr/local/bundle
 ENV PATH $GEM_HOME/bin:$PATH
-ENV BUNDLER_VERSION 1.17.3 
+ENV BUNDLER_VERSION 2.0.0 
 ENV RAILS_ENV=$RAILS_ENV
+
+
 
 RUN gem install bundler -v $BUNDLER_VERSION \
 	&& bundle config --global path "$GEM_HOME" \

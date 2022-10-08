@@ -29,6 +29,7 @@ module CodeWorkout
           '-Dbasedir=. ' \
           '-l ant.log ' \
           '-f ../../../../usr/resources/Java/build.xml',
+          cmd: 'cd "%{attempt_dir}" ; ANT_OPTS="-ea '"-Dant.home=#{ANT_HOME} ""-Dresource_dir=#{APP_DIR}/usr/resources/Java " '-Djava.security.manager '  "-Djava.security.policy==file:#{APP_DIR}/usr/resources/Java/java.policy\" ""-Dwork_dir=#{APP_DIR}/%{attempt_dir}\" "  'ant '  '-Dattempt_dir=%{attempt_dir} '  '-Dbasedir=. '  '-l ant.log '  '-f ../../../../usr/resources/Java/build.xml',
         # daemon_url: "http://localhost:8080/javadaemon/cr?dir=%{attempt_dir}"
       },
       cpp: {

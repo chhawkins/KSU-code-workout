@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+#gem 'bigdecimal', '1.4.4'
 gem 'rails', '~> 4.2'
 gem 'bootstrap-sass-backport', '~> 3.2.0'
 gem 'jquery-rails'
@@ -67,7 +68,7 @@ group :test do
 end
 
 group :production, :staging, :deploy  do
-  gem 'puma', '~> 4.3.5'
+  gem 'puma', '~> 5'
 end
 
 group :doc do
